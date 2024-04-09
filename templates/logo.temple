@@ -1,6 +1,6 @@
-<svg viewBox="0 0 12 12" shape-rendering="crispEdges">
-  <rect x="1" y="1" width="2" height="2"/>
-  <rect x="1" y="5" width="2" height="6"/>
-  <path d="M5 1 h6 v2 h-4 v2 h4 v2 h-4 v4 h-2 v-10 Z"/>
-  <rect x="9" y="9" width="2" height="2"/>
+<svg viewBox="0 0 5 5" shape-rendering="crispEdges">
+  <rect x="0" y="0" width="1" height="1"/>
+  <rect x="0" y="2" width="1" height="3"/>
+  <path d="M2 0 h3 v1 h-2 v1 h2 v1 h-2 v2 h-1 v-5 Z"/>
+  <rect x="4" y="4" width="1" height="1"/>
 </svg>
