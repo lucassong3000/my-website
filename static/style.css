@@ -38,20 +38,29 @@ div.nav-item:hover {
 }
 
 .title {
-  margin-top: 1.5em;
+  margin: 1em;
 }
 
 .title h1 {
-  margin-top: 0em;
-  margin-bottom: 0em;
+  margin: 0;
+}
+
+.title div {
+  margin-left: 1em;
+}
+
+/* This can be used to hint where a line break makes most sense if
+   wrapping is necessary. */
+span.line {
+  display: inline-block;
 }
 
 .content {
-  border-top: 2px solid;
-  border-bottom: 2px solid;
+  border-top: 0.1em solid;
+  border-bottom: 0.1em solid;
 }
 
-main {
+#home {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,12 +68,12 @@ main {
   min-height: 75vh;
 }
 
-main h1 {
+#home h1 {
   border-bottom: 0em;
   margin-bottom: 0em;
 }
 
-main svg {
+#home svg {
   width: 8em;
 }
 
@@ -108,8 +117,7 @@ main svg {
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
-  row-gap: 1em;
-  column-gap: 1em;
+  gap: 1em;
   margin: 1em;
 }
 

@@ -6,7 +6,7 @@
 (def data {:config {:attrs {:base-url "https://isaacfreund.com"
                             :git-commit-year git-commit-year}}
            :index {:attrs {:title "Isaac Freund"}}
-           :blog-index {:attrs {:title "Blog"}}
+           :blog-index {:attrs {:title "Isaac's Blog"}}
            :blog-posts {:src (bagatto/slurp-* "content/blog/*")
                         :attrs bagatto/parse-mago
                         :transform (bagatto/attr-sorter :date :descending)}

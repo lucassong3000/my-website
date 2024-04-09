@@ -1,6 +1,6 @@
 {% (bagatto/include "/templates/head") %}
 
-<main>
+<main id="home">
   {% (bagatto/include "/templates/logo") %}
 
   <h1>Isaac Freund</h1>

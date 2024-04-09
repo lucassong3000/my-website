@@ -1,24 +1,25 @@
 {% (bagatto/include "/templates/head") %}
 
-{% (bagatto/include "/templates/nav-full") %}
+{% (bagatto/include "/templates/nav-bar") %}
 
-<div class="title">
-  <h1>{{ (get-in args [:_item :title]) }}</h1>
-</div>
-
-<div class="content">
-  {% (each post (args :blog-posts) (printf
-```
-  <div class="row">
-    <time>%s</time>
-    <h3 class="list-heading">
-      <a href="/blog/%s/">%s</a>
-    </h3>
+<main>
+  <div class="title">
+    <h1>{{ (get-in args [:_item :title]) }}</h1>
   </div>
-```
-  (post :date)
-  (post :slug)
-  (post :title))) %}
-</div>
+
+  <div class="content">
+    {% (each post (args :blog-posts)
+         (printf
+           ```<div class="row">
+                <time>%s</time>
+                <h3 class="list-heading">
+                  <a href="/blog/%s/">%s</a>
+                </h3>
+              </div>```
+           (post :date)
+           (post :slug)
+           (post :title))) %}
+  </div>
+</main>
 
 {% (bagatto/include "/templates/foot") %}

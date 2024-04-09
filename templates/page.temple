@@ -1,15 +1,20 @@
 {% (bagatto/include "/templates/head") %}
 
-{% (bagatto/include "/templates/nav-full") %}
+{% (bagatto/include "/templates/nav-bar") %}
 
-<div class="title">
-  {% (if-let [date (get-in args [:_item :date])]
-       (printf "<time>%s</time>" date)) %}
-  <h1>{{ (get-in args [:_item :title]) }}</h1>
-</div>
+<main>
+  <div class="title">
+    <h1>{{ (get-in args [:_item :title]) }}</h1>
+    <div>
+      <span class="line">{% (if-let [date (get-in args [:_item :date])]
+         (printf "Posted <time>%s</time>" date)) %}</span>
+      <span class="line">by Isaac Freund</span>
+    </div>
+  </div>
 
-<div class="content">
-  {- (bagatto/markdown->html (get-in args [:_item :body])) -}
-</div>
+  <div class="content">
+    {- (bagatto/markdown->html (get-in args [:_item :body])) -}
+  </div>
+</main>
 
 {% (bagatto/include "/templates/foot") %}
