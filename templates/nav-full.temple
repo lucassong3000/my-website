@@ -1,7 +1,9 @@
-<nav class="row">
-  <a href="/">
-    {% (bagatto/include "/templates/logo") %}
-  </a>
-  &nbsp;
-  {% (bagatto/include "/templates/nav-items") %}
+<nav class="nav-bar">
+  <div class="nav-home"><a href="/">{% (bagatto/include "/templates/logo") %}</a></div>
+  <div class="nav-items">
+    <div class="nav-item"><a href="/blog">blog</a></div>
+    <div class="nav-item"><a href="https://github.com/ifreund">github</a></div>
+    <div class="nav-item"><a href="/public_key.txt">pgp</a></div>
+    <div class="nav-item"><a href="mailto:mail@isaacfreund.com">email</a></div>
+  </div>
 </nav>

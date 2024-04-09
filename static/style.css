@@ -26,12 +26,11 @@ p {
 }
 
 a {
-  color: var(--fg);
-  fill: var(--fg);
-  background-color: var(--bg);
+  color: inherit;
 }
 
-a:hover {
+a:hover,
+div.nav-item:hover {
   color: var(--bg);
   fill: var(--bg);
   background-color: var(--fg);
@@ -67,12 +66,10 @@ main h1 {
 
 main svg {
   width: 8em;
-  height: 8em;
 }
 
 .row {
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 
@@ -80,14 +77,54 @@ main svg {
   white-space: nowrap;
 }
 
-nav svg {
-  width: 3em;
-  height: 3em;
-  display: block;
+.nav-bar {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 0.1em solid;
 }
 
-nav svg:hover {
+.nav-home {
+  display: flex;
+  align-items: flex-end;
+  border-right: 0.1em solid;
+}
+
+.nav-home a {
+  display: block;
+  border: 0.3em solid var(--bg);
+  margin: 0.7em;
+}
+
+.nav-home a:hover {
   border-color: var(--fg);
+}
+
+.nav-home a svg {
+  display: block;
+  width: 3em;
+}
+
+.nav-items {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  row-gap: 1em;
+  column-gap: 1em;
+  margin: 1em;
+}
+
+.nav-item {
+  /* Must specify border color so it doesn't change on hover */
+  border: 0.1em solid var(--fg);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item a {
+  display: block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
 }
 
 .list-heading {
