@@ -66,8 +66,8 @@ main h1 {
 }
 
 main svg {
-  width: 100px;
-  height: 100px;
+  width: 8em;
+  height: 8em;
 }
 
 .row {
@@ -81,11 +81,9 @@ main svg {
 }
 
 nav svg {
-  width: 30px;
-  height: 30px;
+  width: 3em;
+  height: 3em;
   display: block;
-  border-style: solid;
-  border-color: var(--bg);
 }
 
 nav svg:hover {
