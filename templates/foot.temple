@@ -1,8 +1,7 @@
   <footer>
-    © 2021-{{ (get-in args [:config :git-commit-year]) }} Isaac Freund &middot;
-    Content <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a> &middot;
-    <a href="https://github.com/ifreund/website">Source Code</a> <a href="https://spdx.org/licenses/0BSD.html">0BSD</a> &middot;
-    <a href="/blog/feed.xml" type="application/atom+xml">Atom Feed</a>
+    <span class="line">© 2021-{{ (get-in args [:config :git-commit-year]) }} Isaac Freund,</span>
+    <span class="line">Content <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>,</span>
+    <span class="line"><a href="https://github.com/ifreund/website">Source Code</a> <a href="https://spdx.org/licenses/0BSD.html">0BSD</a></span>
   </footer>
   </body>
 </html>

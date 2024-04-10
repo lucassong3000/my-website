@@ -17,7 +17,7 @@ body {
   fill: var(--fg);
 
   margin: 0em auto;
-  max-width: 50em;
+  max-width: 52em;
   padding: 1em;
   font: 1.2em/1.6 monospace;
 }
@@ -52,10 +52,36 @@ div.nav-item:hover {
   margin-left: 1em;
 }
 
+.title.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.list-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1em;
+  margin: 0.75em 0;
+}
+
+.list-row time {
+  white-space: nowrap;
+}
+
+.list-row a {
+  font-weight: bold;
+}
+
 /* This can be used to hint where a line break makes most sense if
    wrapping is necessary. */
 span.line {
   display: inline-block;
+}
+
+.content {
+  padding: 0 1em;
 }
 
 #home {
@@ -73,15 +99,6 @@ span.line {
 
 #home svg {
   width: 8em;
-}
-
-.row {
-  display: flex;
-  align-items: center;
-}
-
-.row time {
-  white-space: nowrap;
 }
 
 .nav-bar {
@@ -128,15 +145,14 @@ span.line {
 .nav-item a {
   display: block;
   padding: 0.25em 0.5em;
+  font-weight: bold;
   text-decoration: none;
 }
 
-.list-heading {
-  margin: 0.5em;
-}
 
 footer {
-  margin-top: 1.0em;
+  border-top: var(--border);
+  padding-top: 1em;
   text-align: center;
   font: 0.8em monospace;
 }

@@ -3,18 +3,19 @@
 {% (bagatto/include "/templates/nav-bar") %}
 
 <main>
-  <div class="title">
+  <div class="title row">
     <h1>{{ (get-in args [:_item :title]) }}</h1>
+    <div>
+      <a href="/blog/feed.xml" type="application/atom+xml">feed.xml</a>
+    </div>
   </div>
 
   <div class="content">
     {% (each post (args :blog-posts)
          (printf
-           ```<div class="row">
+           ```<div class="list-row">
                 <time>%s</time>
-                <h3 class="list-heading">
-                  <a href="/blog/%s/">%s</a>
-                </h3>
+                <a href="/blog/%s/">%s</a>
               </div>```
            (post :date)
            (post :slug)
