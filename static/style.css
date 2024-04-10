@@ -1,6 +1,7 @@
 :root {
   --fg: #000;
   --bg: #fff;
+  --border: 0.2em solid var(--fg)
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,7 +39,9 @@ div.nav-item:hover {
 }
 
 .title {
-  margin: 1em;
+  padding: 1em;
+  border-top: var(--border);
+  border-bottom: var(--border);
 }
 
 .title h1 {
@@ -53,11 +56,6 @@ div.nav-item:hover {
    wrapping is necessary. */
 span.line {
   display: inline-block;
-}
-
-.content {
-  border-top: 0.1em solid;
-  border-bottom: 0.1em solid;
 }
 
 #home {
@@ -89,13 +87,12 @@ span.line {
 .nav-bar {
   display: flex;
   align-items: stretch;
-  border-bottom: 0.1em solid;
 }
 
 .nav-home {
   display: flex;
   align-items: flex-end;
-  border-right: 0.1em solid;
+  border-right: var(--border);
 }
 
 .nav-home a {
@@ -122,8 +119,7 @@ span.line {
 }
 
 .nav-item {
-  /* Must specify border color so it doesn't change on hover */
-  border: 0.1em solid var(--fg);
+  border: var(--border);
   box-sizing: border-box;
   display: flex;
   align-items: center;
