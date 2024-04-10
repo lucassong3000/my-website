@@ -149,10 +149,9 @@ span.line {
   text-decoration: none;
 }
 
-
 footer {
   border-top: var(--border);
   padding-top: 1em;
   text-align: center;
-  font: 0.8em monospace;
+  font: 0.6em sans-serif;
 }
