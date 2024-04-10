@@ -1,6 +1,6 @@
 <div class="nav-items">
-  <div class="nav-item"><a href="/about">about</a></div>
-  <div class="nav-item"><a href="/blog">blog</a></div>
-  <div class="nav-item"><a href="/software">software</a></div>
-  <div class="nav-item"><a href="/poetry">poetry</a></div>
+  <a href="/about">about</a>
+  <a href="/blog">blog</a>
+  <a href="/software">software</a>
+  <a href="/poetry">poetry</a>
 </div>

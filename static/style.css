@@ -34,8 +34,7 @@ a {
   color: inherit;
 }
 
-a:hover,
-div.nav-item:hover {
+a:hover {
   color: var(--bg);
   fill: var(--bg);
   background-color: var(--fg);
@@ -81,16 +80,12 @@ header nav {
   margin: 1em;
 }
 
-.nav-item {
-  border: var(--border);
+.nav-items a {
   display: flex;
   align-items: center;
-  height: 3em;
+  border: var(--border);
   box-sizing: border-box;
-}
-
-.nav-item a {
-  display: block;
+  height: 3em;
   padding: 0 0.5em;
   font-weight: bold;
   text-decoration: none;
