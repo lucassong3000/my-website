@@ -1,6 +1,6 @@
-<div>
-  <a href="/blog">blog</a> &middot;
-  <a href="https://github.com/ifreund">github</a> &middot;
-  <a href="/public_key.txt">pgp</a> &middot;
-  <a href="mailto:mail@isaacfreund.com">email</a>
+<div class="nav-items">
+  <div class="nav-item"><a href="/about">about</a></div>
+  <div class="nav-item"><a href="/blog">blog</a></div>
+  <div class="nav-item"><a href="/software">software</a></div>
+  <div class="nav-item"><a href="/poetry">poetry</a></div>
 </div>

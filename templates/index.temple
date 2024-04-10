@@ -6,7 +6,7 @@
   <h1>Isaac Freund</h1>
   I create things.
 
-  <nav class="row">
+  <nav>
     {% (bagatto/include "/templates/nav-items") %}
   </nav>
 </main>

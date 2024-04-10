@@ -1,7 +1,7 @@
 :root {
   --fg: #000;
   --bg: #fff;
-  --border: 0.2em solid var(--fg)
+  --border: 0.2em solid var(--fg);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,10 +16,14 @@ body {
   background-color: var(--bg);
   fill: var(--fg);
 
-  margin: 0em auto;
+  margin: 0 auto;
   max-width: 52em;
   padding: 1em;
   font: 1.2em/1.6 monospace;
+}
+
+h1 {
+  margin: 0;
 }
 
 p {
@@ -38,70 +42,13 @@ div.nav-item:hover {
   text-decoration: none;
 }
 
-.title {
-  padding: 1em;
-  border-top: var(--border);
-  border-bottom: var(--border);
-}
-
-.title h1 {
-  margin: 0;
-}
-
-.title div {
-  margin-left: 1em;
-}
-
-.title.row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.list-row {
-  display: flex;
-  align-items: baseline;
-  gap: 1em;
-  margin: 0.75em 0;
-}
-
-.list-row time {
-  white-space: nowrap;
-}
-
-.list-row a {
-  font-weight: bold;
-}
-
 /* This can be used to hint where a line break makes most sense if
    wrapping is necessary. */
 span.line {
   display: inline-block;
 }
 
-.content {
-  padding: 0 1em;
-}
-
-#home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 75vh;
-}
-
-#home h1 {
-  border-bottom: 0em;
-  margin-bottom: 0em;
-}
-
-#home svg {
-  width: 8em;
-}
-
-.nav-bar {
+header nav {
   display: flex;
   align-items: stretch;
 }
@@ -113,7 +60,6 @@ span.line {
 }
 
 .nav-home a {
-  display: block;
   border: 0.3em solid var(--bg);
   margin: 0.7em;
 }
@@ -137,21 +83,72 @@ span.line {
 
 .nav-item {
   border: var(--border);
-  box-sizing: border-box;
   display: flex;
   align-items: center;
+  height: 3em;
+  box-sizing: border-box;
 }
 
 .nav-item a {
   display: block;
-  padding: 0.25em 0.5em;
+  padding: 0 0.5em;
   font-weight: bold;
   text-decoration: none;
 }
 
+.title {
+  padding: 1em;
+  border-top: var(--border);
+  border-bottom: var(--border);
+}
+
+.title div {
+  margin-left: 1em;
+}
+
+.title.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.list-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1em;
+  margin: 0.75em 0;
+}
+
+.list-row a {
+  font-weight: bold;
+}
+
+.content {
+  padding: 0 1em;
+}
+
 footer {
   border-top: var(--border);
-  padding-top: 1em;
+  padding: 1em;
   text-align: center;
   font: 0.6em sans-serif;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 75vh;
+}
+
+#home svg {
+  width: 8em;
+  margin: 1em;
+}
+
+#home .nav-items {
+  justify-content: center;
 }
