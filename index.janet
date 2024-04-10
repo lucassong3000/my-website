@@ -13,7 +13,9 @@
            :404 {:src "content/404.md"
                  :attrs bagatto/parse-mago}
            :static {:src (bagatto/* "static/*")
-                    :attrs bagatto/parse-base}})
+                    :attrs bagatto/parse-base}
+           :licenses {:src (bagatto/* "LICENSES/*")
+                      :attrs bagatto/parse-base}})
 
 (defn renderer2
   [template item]
@@ -32,4 +34,6 @@
            :404 {:dest "404.html"
                  :out (renderer2 "/templates/page" :404)}
            :static {:each :static
-                    :dest (bagatto/path-copier "")}})
+                    :dest (bagatto/path-copier "")}
+           :licenses {:each :licenses
+                      :dest (bagatto/path-copier "")}})
