@@ -1,6 +1,7 @@
 {:title "2021 Year's End Status Update"
  :slug "2021-years-end"
- :date "2022-01-01"}
+ :date "2022-01-01"
+ :type :markdown}
 %%%
 Hello all!
 This is my first ever status update so I've ambitiously decided to cover all of 2021.

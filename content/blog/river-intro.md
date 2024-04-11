@@ -1,6 +1,7 @@
 {:title "Introducing River, a Dynamic Tiling Wayland Compositor"
  :slug "river-intro"
- :date "2021-11-03"}
+ :date "2021-11-03"
+ :type :markdown}
 %%%
 In the spring of 2020 I found myself hooked on Wayland thanks to
 [sway](https://swaywm.org/) but increasingly frustrated with the

@@ -123,6 +123,12 @@ header nav {
   padding: 0 1em;
 }
 
+.poem span {
+  display: block;
+  text-indent: -2em;
+  padding-left: 2em;
+}
+
 footer {
   border-top: var(--border);
   padding: 1em;

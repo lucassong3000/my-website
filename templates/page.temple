@@ -5,15 +5,20 @@
 <main>
   <div class="title">
     <h1>{{ (get-in args [:_item :title]) }}</h1>
-    <div>
-      <span class="line">{% (if-let [date (get-in args [:_item :date])]
-         (printf "Posted <time>%s</time>" date)) %}</span>
-      <span class="line">by Isaac Freund</span>
-    </div>
+    {% (if-let [date (get-in args [:_item :date])]
+         (printf `<div>
+                    <span class="line"><time>%s</time></span>
+                    <span class="line">by Isaac Freund</span>
+                  </div>` date)) %}
   </div>
 
   <div class="content">
-    {- (bagatto/markdown->html (get-in args [:_item :body])) -}
+    {- (match [(get-in args [:_item :type])
+               (get-in args [:_item :body])]
+         [:poem body] (poem->html body)
+         [:markdown body] (bagatto/markdown->html body)
+         _ (error (string/format "Unable to render %s"
+                    (get-in args [:_item :path])))) -}
   </div>
 </main>
 
