@@ -32,6 +32,9 @@ p {
 
 a {
   color: inherit;
+  /* Works around what seems to be a chromium bug, This should be
+     inherited from the body but isn't */
+  fill: inherit;
 }
 
 a:hover {
