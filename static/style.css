@@ -20,6 +20,10 @@ body {
   max-width: 52em;
   padding: 1em;
   font: 1.2em/1.6 monospace;
+
+  /* chromium changes the width of the viewport depending on whether
+     or not the page is long enough to require a scrollbar. */
+  overflow-y: scroll;
 }
 
 h1 {
