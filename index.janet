@@ -8,7 +8,8 @@
            :home {:attrs {:title "Isaac Freund"}}
            :about {:src "content/about.md"
                    :attrs bagatto/parse-mago}
-           :blog-index {:attrs {:title "Isaac's Blog"}}
+           :blog-index {:src "content/blog.md"
+                        :attrs bagatto/parse-mago}
            :blog-posts {:src (bagatto/slurp-* "content/blog/*")
                         :attrs bagatto/parse-mago
                         :transform (bagatto/attr-sorter :date :descending)}
@@ -40,16 +41,25 @@
 (defn poem->html [s]
   (in (peg/match poem->html-peg (string/trim s)) 0))
 
+(defn body->html [item]
+  (match [(item :type) (item :body)]
+    [:poem body] (poem->html body)
+    [:markdown body] (bagatto/markdown->html body)
+    _ (error (string/format "Unable to render %s" (item :path)))))
+
 (defn renderer2
-  [template item]
-  (fn [data] (bagatto/render template data (data item))))
+  [template item &opt children]
+  (fn [data]
+    (bagatto/render template data
+                    (merge (data item) {:children (data children)}))))
 
 (def site {:home {:dest "index.html"
                   :out (renderer2 "/templates/home" :home)}
            :about {:dest "about/index.html"
                    :out (renderer2 "/templates/page" :about)}
            :blog-index {:dest "blog/index.html"
-                        :out (renderer2 "/templates/blog-index" :blog-index)}
+                        :out (renderer2 "/templates/list"
+                                        :blog-index :blog-posts)}
            :blog-feed {:dest "blog/feed.xml"
                        :out (bagatto/renderer "/templates/blog-feed")}
            :blog-posts {:each :blog-posts
@@ -59,7 +69,7 @@
            :software {:dest "software/index.html"
                       :out (renderer2 "/templates/page" :software)}
            :poetry-index {:dest "poetry/index.html"
-                          :out (renderer2 "/templates/page" :poetry-index)}
+                          :out (renderer2 "/templates/list" :poetry-index :poetry)}
            :poetry {:each :poetry
                     :dest (fn [_ item]
                             (string/format "poetry/%s/index.html" (item :slug)))

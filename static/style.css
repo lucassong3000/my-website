@@ -97,10 +97,6 @@ header nav {
   border-bottom: var(--border);
 }
 
-.title div {
-  margin-left: 1em;
-}
-
 .title.row {
   display: flex;
   align-items: center;

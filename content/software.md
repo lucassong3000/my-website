@@ -1,4 +1,5 @@
 {:title "Software"
+ :slug "software"
  :type :markdown}
 %%%
 ## river

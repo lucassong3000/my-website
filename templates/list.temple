@@ -1,0 +1,29 @@
+{% (bagatto/include "/templates/head") %}
+
+{% (bagatto/include "/templates/nav-bar") %}
+
+{% (def item (args :_item)) %}
+
+<main>
+  <div class="title row">
+    <h1>{{ (item :title) }}</h1>
+    {% (if-let [feed (item :feed)]
+         (printf `<a href="/%s/%s" type="application/atom+xml">%s</a>`
+                 (item :slug) feed feed)) %}
+  </div>
+
+  <div class="content">
+    {- (body->html item) -}
+    {% (each child (item :children)
+         (printf
+           `<div class="list-row">
+              <time>%s</time>
+              <a href="/%s/%s/">%s</a>
+            </div>`
+           (child :date)
+           (item :slug) (child :slug)
+           (child :title))) %}
+  </div>
+</main>
+
+{% (bagatto/include "/templates/foot") %}
