@@ -122,6 +122,10 @@ header nav {
   margin: 0.75em 0;
 }
 
+.list-row time {
+  white-space: nowrap;
+}
+
 .list-row a {
   font-weight: bold;
   font-size: 1.13em;
