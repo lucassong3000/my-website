@@ -4,6 +4,8 @@
   (string/slice (sh/$< git show -s --format=%as) 0 4))
 
 (def data {:config {:attrs {:base-url "https://isaacfreund.com"
+                            :author "Isaac Freund"
+                            :email "mail@isaacfreund.com"
                             :git-commit-year git-commit-year}}
            :home {:attrs {:title "Isaac Freund"}}
            :about {:src "content/about.md"
