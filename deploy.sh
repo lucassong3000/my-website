@@ -9,7 +9,7 @@ if [ -z "$target" ]; then
 fi
 
 rm -r out
-bag index.janet
+bag website.janet
 minify -v --output . -r out
 
 rm -r "${target}"/*
