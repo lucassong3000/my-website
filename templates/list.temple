@@ -7,9 +7,7 @@
 <main>
   <div class="title row">
     <h1>{{ (item :title) }}</h1>
-    {% (if-let [feed (item :feed)]
-         (printf `<a href="/%s/%s" type="application/atom+xml">%s</a>`
-                 (item :slug) feed feed)) %}
+    <a href="/{{ (item :slug) }}/feed.xml" type="application/atom+xml">feed.xml</a>
   </div>
 
   <div class="content">

@@ -29,11 +29,18 @@
            :licenses {:src (bagatto/* "LICENSES/*")
                       :attrs bagatto/parse-base}})
 
+# The tricky part about rendering poetry is text wrapping.
+# Stanzas are defined by consecutive newlines in the input text.
+# This implementation uses <p> </p> tags for each stanza.
+# Each individual line in a stanza is wrapped in <span>line<br></span>.
+# This allows use of css to indent wrapped lines properly while also
+# rendering line breaks in the right places if no css is applied,
+# for example when view the atom feed in a feed reader.
 (def poem->html-peg
   (peg/compile
     '(% (* (constant `<div class="poem"><p><span>`)
            (any (+ (* (at-least 2 "\n") (constant "</span></p><p><span>"))
-                   (* "\n" (constant "</span><span>"))
+                   (* "\n" (constant "<br></span><span>"))
                    (* "<" (constant "&lt;"))
                    (* ">" (constant "&gt;"))
                    (* "&" (constant "&amp;"))
@@ -63,7 +70,8 @@
                         :out (renderer2 "/templates/list"
                                         :blog-index :blog-posts)}
            :blog-feed {:dest "blog/feed.xml"
-                       :out (bagatto/renderer "/templates/blog-feed")}
+                       :out (renderer2 "/templates/feed"
+                                       :blog-index :blog-posts)}
            :blog-posts {:each :blog-posts
                         :dest (fn [_ item]
                                 (string/format "blog/%s/index.html" (item :slug)))
@@ -71,7 +79,11 @@
            :software {:dest "software/index.html"
                       :out (renderer2 "/templates/page" :software)}
            :poetry-index {:dest "poetry/index.html"
-                          :out (renderer2 "/templates/list" :poetry-index :poetry)}
+                          :out (renderer2 "/templates/list"
+                                          :poetry-index :poetry)}
+           :poetry-feed {:dest "poetry/feed.xml"
+                         :out (renderer2 "/templates/feed"
+                                         :poetry-index :poetry)}
            :poetry {:each :poetry
                     :dest (fn [_ item]
                             (string/format "poetry/%s/index.html" (item :slug)))

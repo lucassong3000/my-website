@@ -1,6 +1,5 @@
 {:title "Blog"
  :slug "blog"
- :feed "feed.xml"
  :type :markdown}
 %%%
 My blog consists primarily of updates regarding my free and open source software projects.

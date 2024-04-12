@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  {% (def config (args :config)) %}
+  {% (def item (args :_item)) %}
+
+  {% (def path
+       (string/format "%s/%s" (config :base-url) (item :slug))) %}
+
+  <title>{{ (config :author) }}'s {{ (item :title) }}</title>
+  <link href="{{ path }}/"/>
+  <link rel="self" href="{{ path }}/feed.xml"
+    type="application/atom+xml"/>
+  <id>{{ path }}/feed.xml</id>
+  <author>
+    <name>{{ (config :author) }}</name>
+    <email>{{ (config :email) }}</email>
+  </author>
+
+  <updated>{{ (get-in item [:children 0 :date]) }}T00:00:00Z</updated>
+
+  {$ (import "/templates/feed-entry") $}
+  {% (each child (item :children)
+       (feed-entry/render-dict
+         (merge child {:url (string/format "%s/%s/"
+                                           path (child :slug))}))) %}
+</feed>
