@@ -15,7 +15,7 @@
     {% (each child (item :children)
          (printf
            `<div class="list-row">
-              <time>%s</time>
+              <time><span class="nowrap">%s</span></time>
               <a href="/%s/%s/">%s</a>
             </div>`
            (child :date)

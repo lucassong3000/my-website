@@ -55,7 +55,7 @@
 (defn body->html [item]
   (match [(item :type) (item :body)]
     [:poem body] (poem->html body)
-    [:markdown body] (bagatto/markdown->html body)
+    [:markdown body] (bagatto/markdown->html body :opts [:smart :unsafe])
     _ (error (string/format "Unable to render %s" (item :path)))))
 
 (defn renderer2

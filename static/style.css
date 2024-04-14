@@ -54,6 +54,10 @@ span.line {
   display: inline-block;
 }
 
+span.nowrap {
+  white-space: nowrap;
+}
+
 header nav {
   display: flex;
   align-items: stretch;
@@ -128,10 +132,6 @@ h1.logo {
   align-items: baseline;
   gap: 1em;
   margin: 0.75em 0;
-
-  time {
-    white-space: nowrap;
-  }
 
   a {
     font-weight: bold;
