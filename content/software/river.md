@@ -49,7 +49,7 @@ commands to set up the user's configuration.
 
 ## Documentation
 
-The offical river documentation is the [man pages](https://codeberg.org/river/river/src/branch/master/doc).
+The official river documentation is the [man pages](https://codeberg.org/river/river/src/branch/master/doc).
 We also have a [wiki](https://codeberg.org/river/wiki).
 
 To discuss river and ask questions, join our IRC channel,
@@ -59,7 +59,7 @@ of conduct may be found
 
 ## Future Plans
 
-Currently details such as how tags work across mulitple monitors are not
+Currently details such as how tags work across multiple monitors are not
 possible for users to configure. It would be possible to extend river's source
 code to allow more flexibility here but this comes at the cost of complexity and
 there will always be someone who prefers something slightly different.

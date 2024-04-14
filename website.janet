@@ -37,7 +37,7 @@
 # Each individual line in a stanza is wrapped in <span>line<br></span>.
 # This allows use of css to indent wrapped lines properly while also
 # rendering line breaks in the right places if no css is applied,
-# for example when view the atom feed in a feed reader.
+# for example when viewing the atom feed in a feed reader.
 (def poem->html-peg
   (peg/compile
     '(% (* (constant `<div class="poem"><p><span>`)

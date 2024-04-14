@@ -30,8 +30,8 @@ To remedy this I [implemented](https://github.com/riverwm/river/pull/296) basic 
 
 [Zig 0.8.0](https://ziglang.org/download/0.8.0/release-notes.html) was released in the first week of June, which included several improvements I made to Zig's handling of linking libc.
 These improvements directly affected users building river, solving a few long-standing issues on that front.
-Around this time I also started to think about a first river release and resumed my effort to [properly package zig software for void linux](https://github.com/void-linux/void-packages/pull/29288).
-This lead to a series of zig patches to allow for cross compilation while linking system libraries and integration into void linux's build system.
+Around this time I also started to think about a first river release and resumed my effort to [properly package zig software for void Linux](https://github.com/void-linux/void-packages/pull/29288).
+This lead to a series of zig patches to allow for cross compilation while linking system libraries and integration into void Linux's build system.
 
 In July I focused on stabilizing and simplifying river's behavior, aiming for consistency and predictability.
 As part of this, I [further simplified our layout protocol](https://github.com/riverwm/river/pull/359) and cleaned up all of river's user-facing interfaces.
@@ -61,4 +61,4 @@ to replace my older, more complex [rundird](https://github.com/ifreund/rundird) 
 This is useful on systems that do not run logind, opting for a simpler alternative such as [seatd](https://sr.ht/~kennylevinsen/seatd) instead.
 
 2021 was an action packed year for me, I'm very happy looking back on the progress I've made on river and the surrounding open source ecosystem.
-Here's to another year of work towards building my ideal linux graphical environment in 2022!
+Here's to another year of work towards building my ideal Linux graphical environment in 2022!
