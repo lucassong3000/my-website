@@ -63,20 +63,19 @@ header nav {
   display: flex;
   align-items: flex-end;
   border-right: var(--border);
-}
 
-.nav-home a {
-  border: 0.3em solid var(--bg);
-  margin: 0.7em;
-}
+  a {
+    border: 0.3em solid var(--bg);
+    margin: 0.7em;
+    svg {
+      display: block;
+      width: 3em;
+    }
+  }
 
-.nav-home a:hover {
-  border-color: var(--fg);
-}
-
-.nav-home a svg {
-  display: block;
-  width: 3em;
+  a:hover {
+    border-color: var(--fg);
+  }
 }
 
 .nav-items {
@@ -85,27 +84,27 @@ header nav {
   flex-wrap: wrap;
   gap: 1em;
   margin: 1em;
-}
 
-.nav-items a {
-  display: flex;
-  align-items: center;
-  border: var(--border);
-  box-sizing: border-box;
-  height: 3em;
-  padding: 0 0.5em;
-  font-weight: bold;
-  text-decoration: none;
+  a {
+    display: flex;
+    align-items: center;
+    border: var(--border);
+    box-sizing: border-box;
+    height: 3em;
+    padding: 0 0.5em;
+    font-weight: bold;
+    text-decoration: none;
+  }
 }
 
 .title {
   padding: 1em;
   border-top: var(--border);
   border-bottom: var(--border);
-}
 
-.title div {
-  margin-left: 1em;
+  div {
+    margin-left: 1em;
+  }
 }
 
 .title.row {
@@ -118,10 +117,10 @@ header nav {
 h1.logo {
   display: flex;
   justify-content: center;
-}
 
-h1.logo svg {
-  max-width: 16em;
+  svg {
+    max-width: 16em;
+  }
 }
 
 .list-row {
@@ -129,15 +128,15 @@ h1.logo svg {
   align-items: baseline;
   gap: 1em;
   margin: 0.75em 0;
-}
 
-.list-row time {
-  white-space: nowrap;
-}
+  time {
+    white-space: nowrap;
+  }
 
-.list-row a {
-  font-weight: bold;
-  font-size: 1.13em;
+  a {
+    font-weight: bold;
+    font-size: 1.13em;
+  }
 }
 
 .content {
@@ -164,26 +163,29 @@ footer {
   justify-content: center;
   text-align: center;
   min-height: 75vh;
-}
 
-#home svg {
-  width: 8em;
-  margin: 1em;
-}
+  svg {
+    width: 8em;
+    margin: 1em;
+  }
 
-#home .nav-items {
-  justify-content: center;
+  .nav-items {
+    justify-content: center;
+  }
 }
 
 .software .content ul {
   padding-left: 2em;
+
   li {
     margin: 1em 0;
   }
+
   h3 {
     display: inline;
     padding-left: 0.5em;
   }
+
   p {
     display: inline;
   }
