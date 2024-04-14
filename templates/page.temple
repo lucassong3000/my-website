@@ -6,7 +6,10 @@
 
 <main>
   <div class="title">
-    <h1>{{ (item :title) }}</h1>
+    {% (match (item :title)
+         "river" (bagatto/include "/templates/river_logo")
+         title (printf "<h1>%s</h1>" title)) %}
+
     {% (if-let [date (item :date)]
          (printf `<div>
                     <span class="line"><time>%s</time></span>

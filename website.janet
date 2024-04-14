@@ -15,7 +15,9 @@
            :blog-posts {:src (bagatto/slurp-* "content/blog/*")
                         :attrs bagatto/parse-mago
                         :transform (bagatto/attr-sorter :date :descending)}
-           :software {:src "content/software.md"
+           :software-index {:src "content/software.md"
+                            :attrs bagatto/parse-mago}
+           :software {:src (bagatto/slurp-* "content/software/*")
                       :attrs bagatto/parse-mago}
            :poetry-index {:src "content/poetry.md"
                           :attrs bagatto/parse-mago}
@@ -76,8 +78,12 @@
                         :dest (fn [_ item]
                                 (string/format "blog/%s/index.html" (item :slug)))
                         :out (bagatto/renderer "/templates/page")}
-           :software {:dest "software/index.html"
-                      :out (renderer2 "/templates/page" :software)}
+           :software-index {:dest "software/index.html"
+                            :out (renderer2 "/templates/page" :software-index)}
+           :software {:each :software
+                      :dest (fn [_ item]
+                              (string/format "software/%s/index.html" (item :slug)))
+                      :out (bagatto/renderer "/templates/page")}
            :poetry-index {:dest "poetry/index.html"
                           :out (renderer2 "/templates/list"
                                           :poetry-index :poetry)}
