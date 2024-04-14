@@ -2,14 +2,17 @@
  :slug "software"
  :type :markdown}
 %%%
-## river
+Here's some of the most notable/useful free and open source software I've
+written:
 
-something about river
+- ### [river](/software/river/)
+  -- A dynamic tiling Wayland compositor
 
-## waylock
+- ### [waylock](/software/waylock/)
+  -- A small and secure Wayland screenlocker
 
-something about waylock
+- ### [zig-wayland](https://codeberg.org/ifreund/zig-wayland)
+  -- Zig wayland scanner and [libwayland](https://gitlab.freedesktop.org/wayland/wayland) bindings
 
-## zig-wayland
-
-etc
+- ### [zig-wlroots](https://codeberg.org/ifreund/zig-wlroots)
+  -- Zig bindings for [wlroots](https://gitlab.freedesktop.org/wlroots/wlroots)

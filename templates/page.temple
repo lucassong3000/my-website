@@ -4,7 +4,7 @@
 
 {% (def item (args :_item)) %}
 
-<main>
+<main class="{{ (item :slug) }}">
   <div class="title">
     {% (match (item :title)
          "river" (bagatto/include "/templates/river_logo")
