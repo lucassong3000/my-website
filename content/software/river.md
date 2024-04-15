@@ -33,7 +33,7 @@ Rather than having the tiled layout logic built into the compositor process,
 river uses a [custom Wayland
 protocol](https://codeberg.org/river/river/src/branch/master/protocol/river-layout-v3.xml)
 and separate "layout generator" process. A basic layout generator, `rivertile`,
-is provided but users are encouraged to other community-developed [layout
+is provided but users are encouraged to use community-developed [layout
 generators](https://codeberg.org/river/wiki/src/branch/master/pages/Community-Layouts.md)
 or write their own. Examples in C and Python may be found
 [here](https://codeberg.org/river/river/src/branch/master/contrib).
