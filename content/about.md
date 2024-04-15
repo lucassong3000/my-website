@@ -22,10 +22,4 @@ The source code for my software projects is hosted on
 [github](https://github.com/ifreund) and
 [sourcehut](https://git.sr.ht/~ifreund).
 
-If my work adds value to your life please consider supporting me financially.
-The best way to do so is with a monthly donation on
-[liberapay](https://liberapay.com/ifreund). You can also support me with a
-one-time or monthly donation on
-[github sponsors](https://github.com/sponsors/ifreund) or
-[ko-fi](https://ko-fi.com/ifreund) though I prefer liberapay as it is run by a
-non-profit. Thank you for your support!
+If my work adds value to your life and you'd like to support me financially you can find donation information [here](/donate/).

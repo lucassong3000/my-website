@@ -76,3 +76,8 @@ plan to focus on this change for the 0.4.0 release cycle. Unfortunately, it will
 almost certainly break existing river configurations as well. I think the
 benefits outweigh that downside though and I will do my best to offer a
 reasonable upgrade path.
+
+## Donate
+
+If my work on river adds value to your life and you'd like to support me
+financially you can find donation information [here](/donate/).
