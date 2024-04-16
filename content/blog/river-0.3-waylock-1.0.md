@@ -34,7 +34,7 @@ For a full list of changes, see the release notes [here](https://codeberg.org/ri
 Thank you to everyone who has contributed code and bug reports to river!
 River would not be where it is today without you.
 
-In other river news, the upstream river repository has moved to https://codeberg.org/river/river.
+In other river news, the upstream river repository has moved to [https://codeberg.org/river/river](https://codeberg.org/river/river).
 Github is a proprietary platform with interests increasingly misaligned with my values.
 Free and open source software like river should not require contributors to have a github account or interact with github in any way.
 There is still a read-only mirror of the river repository on github for now to ease the transition,
