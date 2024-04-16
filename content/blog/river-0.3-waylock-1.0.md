@@ -44,7 +44,7 @@ River also now has a page [here](/software/river) on my website,
 I've written a bit about my future plans for river there if you're curious :)
 River also has gained a written [Code of Conduct](https://codeberg.org/river/river/src/branch/master/CODE_OF_CONDUCT.md)
 documenting the existing standards and moderation practice.
-Luckily, we have have a wonderful community and haven't yet had to deal with any notable unacceptable behavior I'm aware of.
+Luckily, we have a wonderful community and haven't yet had to deal with any notable unacceptable behavior I'm aware of.
 
 ## Waylock 1.0.0
 
