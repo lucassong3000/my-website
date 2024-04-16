@@ -14,7 +14,7 @@ may be found and where contributions are accepted. Read-only mirrors of the
 source code exist on [sourcehut](https://git.sr.ht/~ifreund/river) and
 [github](https://github.com/riverwm/river).
 
-The current river release is [0.2.6](https://codeberg.org/river/river/releases/tag/v0.2.6).
+The current river release is [0.3.0](https://codeberg.org/river/river/releases/tag/v0.3.0).
 
 River has not yet seen a stable 1.0 release and it will be necessary to make
 significant breaking changes before 1.0 to realize my longer term goals. That
@@ -69,7 +69,7 @@ possible out of the river compositor process and into the "layout generator"
 process which will need to be renamed to "window manager." This will give users
 much more power and control over river's behavior and also enable some really
 cool workflows. For example, it would be possible to write a window manager in
-lisp and use hot code reloading to edit its behavior it while it is running.
+lisp and use hot code reloading to edit its behavior while it is running.
 
 This is a non-trivial architectural change and will take a while to implement. I
 plan to focus on this change for the 0.4.0 release cycle. Unfortunately, it will
