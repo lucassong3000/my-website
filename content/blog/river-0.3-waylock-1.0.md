@@ -1,6 +1,6 @@
 {:title "River 0.3.0, Waylock 1.0.0, Status Update"
  :slug "river-0.3-waylock-1.0"
- :date "2024-16-04"
+ :date "2024-04-16"
  :type :markdown}
 %%%
 Things have been a bit quiet on this blog recently.
