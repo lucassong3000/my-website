@@ -98,7 +98,7 @@
                     :out (bagatto/renderer "/templates/page")}
            :donate {:dest "donate/index.html"
                     :out (renderer2 "/templates/page" :donate)}
-           :404 {:dest "404/index.html"
+           :404 {:dest "404.html"
                  :out (renderer2 "/templates/page" :404)}
            :static {:each :static
                     :dest (bagatto/path-copier "")}
