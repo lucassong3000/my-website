@@ -14,7 +14,7 @@ may be found and where contributions are accepted. Read-only mirrors of the
 source code exist on [sourcehut](https://git.sr.ht/~ifreund/river) and
 [github](https://github.com/riverwm/river).
 
-The current river release is [0.3.0](https://codeberg.org/river/river/releases/tag/v0.3.0).
+The latest river release can be found [here on codeberg](https://codeberg.org/river/river/releases/).
 
 River has not yet seen a stable 1.0 release and it will be necessary to make
 significant breaking changes before 1.0 to realize my longer term goals. That
