@@ -2,5 +2,6 @@
  :slug "poetry"
  :type :markdown}
 %%%
-I recently wrote a poem I felt like sharing, so here it is.
-I'll probably add more in the future as they come to me.
+I've written some poems I felt to be worthy of sharing.
+More will be added in the future as they come to me.
+I hope you enjoy!
