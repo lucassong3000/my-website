@@ -33,7 +33,9 @@
            :static {:src (bagatto/* "static/*")
                     :attrs bagatto/parse-base}
            :licenses {:src (bagatto/* "LICENSES/*")
-                      :attrs bagatto/parse-base}})
+                      :attrs bagatto/parse-base}
+           :impressum {:src "content/impressum.md"
+                       :attrs bagatto/parse-mago}})
 
 # The tricky part about rendering poetry is text wrapping.
 # Stanzas are defined by consecutive newlines in the input text.
@@ -107,4 +109,6 @@
            :static {:each :static
                     :dest (bagatto/path-copier "")}
            :licenses {:each :licenses
-                      :dest (bagatto/path-copier "")}})
+                      :dest (bagatto/path-copier "")}
+           :impressum {:dest "impressum/index.html"
+                       :out (renderer2 "/templates/page" :impressum)}})
