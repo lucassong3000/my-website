@@ -24,6 +24,8 @@
            :poetry {:src (bagatto/slurp-* "content/poetry/*")
                     :attrs bagatto/parse-mago
                     :transform (bagatto/attr-sorter :date :descending)}
+           :consulting {:src "content/consulting.md"
+                        :attrs bagatto/parse-mago}
            :donate {:src "content/donate.md"
                     :attrs bagatto/parse-mago}
            :404 {:src "content/404.md"
@@ -96,6 +98,8 @@
                     :dest (fn [_ item]
                             (string/format "poetry/%s/index.html" (item :slug)))
                     :out (bagatto/renderer "/templates/page")}
+           :consulting {:dest "consulting/index.html"
+                        :out (renderer2 "/templates/page" :consulting)}
            :donate {:dest "donate/index.html"
                     :out (renderer2 "/templates/page" :donate)}
            :404 {:dest "404.html"
