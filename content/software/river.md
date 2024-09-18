@@ -7,7 +7,7 @@
 River is a dynamic tiling Wayland compositor with flexible runtime
 configuration. It is free and open source software.
 
-River is [packaged](https://repology.org/project/river/versions) by various
+River is [packaged](https://repology.org/project/river-compositor/versions) by various
 Linux distributions as well as FreeBSD. The source code is hosted on
 [codeberg](https://codeberg.org/river/river), which is where the issue tracker
 may be found and where contributions are accepted. Read-only mirrors of the
