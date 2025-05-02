@@ -1,8 +1,0 @@
-  <footer>
-    <span class="line">© 2021-{{ (get-in args [:config :git-commit-year]) }} Isaac Freund,</span>
-    <span class="line"><a href="/impressum">Impressum</a>,</span>
-    <span class="line">Content <a href="/CC-BY-NC-SA-4.0.txt">CC-BY-NC-SA-4.0</a>,</span>
-    <span class="line"><a href="https://codeberg.org/ifreund/website">Source Code</a> <a href="/AGPL-3.0-only.txt">AGPL-3.0-only</a></span>
-  </footer>
-  </body>
-</html>

@@ -1,6 +1,0 @@
-<header>
- <nav>
-   <div class="nav-home"><a href="/">{% (bagatto/include "/templates/logo") %}</a></div>
-   {% (bagatto/include "/templates/nav-items") %}
- </nav>
-</header>
